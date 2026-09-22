@@ -831,8 +831,30 @@
     return true;
   }
 
+  // ---- Partial / abandoned lead capture ----
+  // Fire a lead as soon as we have contact info, even if the visitor never
+  // completes the form. Marked partial:true; BrokerIQ de-dupes so the full
+  // submission later updates the same record.
+  let _partialSent = false, _submitted = false;
+  function _collect(){ const p={}; for(const el of form.elements){ if(el.name && el.value) p[el.name]=el.value; } return p; }
+  function _hasContact(p){ return ((p.email||'').includes('@')) || ((p.phone||'').replace(/\D/g,'').length>=10); }
+  function _firePartial(beacon){
+    if(_partialSent || _submitted) return;
+    const p=_collect();
+    if(!(_hasContact(p) && (p.first_name||p.last_name||p.name))) return;
+    p.partial=true; _partialSent=true;
+    const body=JSON.stringify(p);
+    try{
+      if(beacon && navigator.sendBeacon){ navigator.sendBeacon('/api/quote', new Blob([body],{type:'application/json'})); }
+      else { fetch('/api/quote',{method:'POST',headers:{'Content-Type':'application/json'},body,keepalive:true}); }
+    }catch{}
+  }
+  window.addEventListener('pagehide',()=>_firePartial(true));
+  document.addEventListener('visibilitychange',()=>{ if(document.visibilityState==='hidden') _firePartial(true); });
+
   nextBtn.addEventListener('click',()=>{
     if(!validCurrentStep()) return;
+    _firePartial(false);
     if(current < steps.length-1){ current++; update(); }
   });
 
@@ -844,6 +866,7 @@
     e.preventDefault();
     if(!validCurrentStep()) return;
 
+    _submitted = true; _partialSent = true;
     const payload = Object.fromEntries(new FormData(form).entries());
 
     // Verify the email is real before submitting (blocks spam / typos). Fails open.

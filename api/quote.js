@@ -95,10 +95,13 @@ export default async function handler(req, res) {
     .map(([k, v]) => `${k.replace(/_/g, " ")}: ${Array.isArray(v) ? v.join(", ") : v}`)
     .join("\n");
 
+  const isPartial = b.partial === true || b.partial === "true";
   const lead = {
     source: "pokemoncardinsurance.com",
     tenant_id: BROKERIQ_TENANT_ID,
     lead_type: "collectible_insurance",
+    lead_status: isPartial ? "partial" : "complete",
+    partial: isPartial,
     name,
     email,
     phone,
@@ -110,8 +113,8 @@ export default async function handler(req, res) {
   await Promise.allSettled([
     forwardToBrokerIQ(lead),
     sendEmail(
-      `New Pokemon Card Insurance lead: ${name || email || phone || "(no name)"}`,
-      `<h2>New Pokemon Card Insurance lead</h2>
+      `${isPartial ? "[PARTIAL LEAD] " : ""}New Pokemon Card Insurance lead: ${name || email || phone || "(no name)"}`,
+      `<h2>${isPartial ? "[PARTIAL — form not completed] " : ""}New Pokemon Card Insurance lead</h2>
        <p><b>Name:</b> ${esc(name)}</p>
        <p><b>Email:</b> ${esc(email)}</p>
        <p><b>Phone:</b> ${esc(phone)}</p>
