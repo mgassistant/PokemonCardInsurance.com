@@ -13,7 +13,7 @@
 // downstream (BrokerIQ / Resend) call fails; errors are logged server-side.
 
 const BROKERIQ_URL = process.env.BROKERIQ_URL || "https://www.broker-iq.com/api/leads/inbound";
-const BROKERIQ_TENANT_ID = process.env.BROKERIQ_TENANT_ID || ""; // separate tenant — set in Vercel
+const BROKERIQ_TENANT_ID = process.env.BROKERIQ_TENANT_ID || "a48b4bbb-0a1a-4cef-bb21-56c7bf94f64e"; // defaults to tcg-insurance tenant; override in Vercel with the separate tenant when ready
 const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
 const NOTIFY_TO = process.env.LEAD_NOTIFY_TO || "";
 const NOTIFY_FROM = process.env.LEAD_NOTIFY_FROM || "Pokemon Card Insurance <support@pokemoncardinsurance.com>";
