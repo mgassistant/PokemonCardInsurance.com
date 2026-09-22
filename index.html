@@ -846,6 +846,16 @@
 
     const payload = Object.fromEntries(new FormData(form).entries());
 
+    // Verify the email is real before submitting (blocks spam / typos). Fails open.
+    const _em = (payload.email || '').trim();
+    if (_em && _em.includes('@')) {
+      try {
+        const _vr = await fetch('/api/verify-email', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: _em }) });
+        const _vj = await _vr.json();
+        if (_vj && _vj.ok === false) { alert('Please enter a valid email address so we can reach you.'); return; }
+      } catch {}
+    }
+
     // Send the lead to our endpoint (forwards to BrokerIQ + emails the agency).
     // Fail-open: the visitor still sees success even if the request errors.
     try {
