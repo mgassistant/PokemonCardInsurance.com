@@ -1,0 +1,807 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Pokémon Card Insurance | Protect Graded & Sealed Collections</title>
+  <meta name="description" content="Request a Pokémon card insurance quote for graded cards, sealed product, singles, and high-value collections. Coverage options may include theft, fire, transit, shows, and grading-related risks." />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="https://pokemoncardinsurance.com/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Pokémon Card Insurance | Protect Your Collection" />
+  <meta property="og:description" content="Purpose-built protection for graded cards, sealed product, singles, and high-value collections." />
+  <meta property="og:url" content="https://pokemoncardinsurance.com/" />
+  <meta property="og:site_name" content="PokemonCardInsurance.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <meta name="theme-color" content="#07120e" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pokemoncardinsurance.com/#organization",
+        "name": "PokemonCardInsurance.com",
+        "url": "https://pokemoncardinsurance.com/",
+        "description": "Insurance quote intake and educational resources for trading card collectors."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pokemoncardinsurance.com/#website",
+        "url": "https://pokemoncardinsurance.com/",
+        "name": "PokemonCardInsurance.com",
+        "publisher": {"@id": "https://pokemoncardinsurance.com/#organization"}
+      },
+      {
+        "@type": "Service",
+        "@id": "https://pokemoncardinsurance.com/#service",
+        "name": "Pokémon Card Insurance Quote Request",
+        "serviceType": "Collectibles insurance quote assistance",
+        "provider": {"@id": "https://pokemoncardinsurance.com/#organization"},
+        "areaServed": "US",
+        "description": "Quote request assistance for eligible Pokémon trading card collections, including graded cards, sealed product, singles, and related collectibles."
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://pokemoncardinsurance.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can Pokémon cards be insured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Specialty collectibles policies may be available for eligible trading card collections. Availability, limits, exclusions, valuation requirements, and covered causes of loss vary by carrier and policy."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can graded Pokémon cards be insured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Eligible graded cards may be insurable. Insurers may ask for certification numbers, photos, purchase records, current values, or appraisals depending on the card and collection value."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can sealed Pokémon products be insured?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Some collectibles insurance programs may consider sealed products such as booster boxes, elite trainer boxes, and other sealed inventory, subject to underwriting and policy terms."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does homeowners insurance cover a Pokémon card collection?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Homeowners policies can contain limits, exclusions, deductibles, or valuation provisions that may not fit a specialized collection. Collectors should compare their current policy with specialty collectibles coverage and review the actual terms."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{
+      --bg:#06100c;
+      --panel:#0b1913;
+      --panel2:#10241b;
+      --text:#f5fff9;
+      --muted:#a7c0b2;
+      --line:rgba(255,255,255,.10);
+      --green:#35e58d;
+      --green2:#86ffc0;
+      --gold:#f4d27b;
+      --danger:#ff8d8d;
+      --max:1180px;
+      --radius:26px;
+      --shadow:0 30px 80px rgba(0,0,0,.36);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 20% 0%, rgba(53,229,141,.12), transparent 33rem),
+        radial-gradient(circle at 85% 18%, rgba(244,210,123,.08), transparent 28rem),
+        linear-gradient(180deg,#050b08 0%,#07150f 45%,#050a08 100%);
+      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input,select,textarea{font:inherit}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+
+    .grain{
+      position:fixed;inset:0;pointer-events:none;z-index:100;
+      opacity:.04;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
+      mix-blend-mode:screen;
+    }
+
+    nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(4,10,7,.68);
+      border-bottom:1px solid var(--line);
+    }
+    .nav-inner{
+      height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.02em}
+    .brand-mark{
+      width:38px;height:44px;border-radius:12px 12px 16px 16px;
+      background:linear-gradient(145deg,var(--green2),var(--green) 58%,#0b7c49);
+      clip-path:polygon(50% 0,92% 14%,86% 75%,50% 100%,14% 75%,8% 14%);
+      box-shadow:0 0 24px rgba(53,229,141,.28);
+    }
+    .brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.18em;text-transform:uppercase;font-weight:700}
+    .nav-links{display:flex;gap:28px;color:#cfe4d7;font-size:14px}
+    .nav-cta,.btn{
+      border:0;border-radius:999px;padding:14px 20px;font-weight:800;cursor:pointer;
+      background:linear-gradient(135deg,var(--green2),var(--green));
+      color:#04110a;box-shadow:0 12px 32px rgba(53,229,141,.18);
+      transition:.25s ease;
+    }
+    .nav-cta:hover,.btn:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(53,229,141,.28)}
+
+    .hero{min-height:780px;display:grid;align-items:center;position:relative;padding:92px 0 80px}
+    .hero-grid{display:grid;grid-template-columns:1.06fr .94fr;gap:64px;align-items:center}
+    .eyebrow{
+      display:inline-flex;gap:9px;align-items:center;
+      border:1px solid rgba(134,255,192,.22);background:rgba(53,229,141,.06);
+      color:var(--green2);border-radius:999px;padding:8px 12px;font-size:12px;
+      letter-spacing:.12em;text-transform:uppercase;font-weight:800;
+    }
+    .pulse{width:7px;height:7px;border-radius:50%;background:var(--green);box-shadow:0 0 0 7px rgba(53,229,141,.09)}
+    h1{
+      font-size:clamp(48px,7vw,92px);line-height:.95;letter-spacing:-.055em;
+      margin:22px 0 22px;max-width:900px;
+    }
+    h1 em{
+      font-style:normal;color:transparent;
+      background:linear-gradient(100deg,#f6fff9 15%,var(--green2) 55%,var(--gold));
+      -webkit-background-clip:text;background-clip:text;
+    }
+    .hero-copy{font-size:19px;color:var(--muted);max-width:680px}
+    .hero-actions{display:flex;gap:14px;align-items:center;margin-top:32px;flex-wrap:wrap}
+    .ghost{
+      border:1px solid var(--line);border-radius:999px;padding:14px 20px;
+      color:#e4f3ea;background:rgba(255,255,255,.03);font-weight:700;
+    }
+    .micro{margin-top:18px;color:#7f9b8c;font-size:12px}
+
+    .scene{
+      position:relative;min-height:560px;display:grid;place-items:center;perspective:1200px;
+    }
+    .orb{
+      position:absolute;width:470px;height:470px;border-radius:50%;
+      background:radial-gradient(circle at 35% 35%,rgba(134,255,192,.20),rgba(53,229,141,.06) 35%,rgba(53,229,141,0) 70%);
+      filter:blur(8px);animation:float 7s ease-in-out infinite;
+    }
+    .slab{
+      width:300px;height:430px;border-radius:28px;padding:14px;
+      background:linear-gradient(145deg,rgba(255,255,255,.22),rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.18);box-shadow:var(--shadow);
+      transform:rotateY(-12deg) rotateX(7deg) rotateZ(3deg);
+      position:relative;z-index:3;backdrop-filter:blur(12px);
+      animation:cardFloat 6s ease-in-out infinite;
+    }
+    .slab:before{      content:"";position:absolute;inset:-2px;border-radius:30px;padding:1px;
+      background:linear-gradient(120deg,rgba(134,255,192,.65),rgba(255,255,255,.03),rgba(244,210,123,.45));
+      -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+      -webkit-mask-composite:xor;mask-composite:exclude;
+    }
+    .label{
+      height:72px;border-radius:17px;background:linear-gradient(135deg,#edf7f0,#cfe7d7);
+      color:#07110c;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:8px;
+    }
+    .label strong{font-size:12px;letter-spacing:.06em}.label span{font-size:10px;opacity:.62}
+    .grade{font-size:28px;font-weight:900;line-height:1}
+    .card-art{
+      height:315px;margin-top:12px;border-radius:18px;position:relative;overflow:hidden;
+      background:
+        radial-gradient(circle at 70% 25%,rgba(255,255,255,.65),transparent 16%),
+        conic-gradient(from 215deg at 58% 46%,#214936,#78f4b0,#e9c267,#173426,#214936);
+    }
+    .card-art:before{
+      content:"";position:absolute;inset:22px;border:1px solid rgba(255,255,255,.42);border-radius:16px;
+      background:
+        radial-gradient(circle at 45% 46%,rgba(255,255,255,.18),transparent 28%),
+        linear-gradient(135deg,rgba(255,255,255,.05),rgba(0,0,0,.22));
+    }
+    .card-art:after{
+      content:"COLLECT • PROTECT";position:absolute;bottom:30px;left:0;right:0;text-align:center;
+      font-weight:900;letter-spacing:.16em;font-size:13px;text-shadow:0 2px 10px rgba(0,0,0,.55);
+    }
+    .mini-slab{
+      position:absolute;width:170px;height:245px;border-radius:20px;
+      border:1px solid rgba(255,255,255,.13);
+      background:linear-gradient(150deg,#163326,#07100c);
+      box-shadow:0 25px 70px rgba(0,0,0,.36);
+    }
+    .mini-1{right:4%;top:8%;transform:rotate(14deg);opacity:.75}
+    .mini-2{left:0;bottom:8%;transform:rotate(-16deg);opacity:.6}
+    .value-chip{
+      position:absolute;right:-8px;bottom:65px;z-index:8;padding:13px 16px;border-radius:18px;
+      border:1px solid rgba(255,255,255,.12);background:rgba(9,25,18,.78);backdrop-filter:blur(14px);
+      box-shadow:var(--shadow);font-size:12px;color:var(--muted)
+    }
+    .value-chip b{display:block;color:white;font-size:20px}
+
+    @keyframes cardFloat{50%{transform:rotateY(-8deg) rotateX(4deg) rotateZ(1deg) translateY(-14px)}}
+    @keyframes float{50%{transform:translateY(-18px) scale(1.03)}}
+
+    .trust{
+      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+      background:rgba(255,255,255,.018);
+    }
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .trust-item{padding:26px 24px;border-right:1px solid var(--line)}
+    .trust-item:last-child{border-right:0}
+    .trust-item b{display:block;font-size:15px}.trust-item span{font-size:12px;color:var(--muted)}
+
+    section{padding:110px 0}
+    .kicker{color:var(--green);font-weight:900;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+    h2{font-size:clamp(36px,5vw,62px);letter-spacing:-.04em;line-height:1.02;margin:14px 0 18px}
+    .section-copy{color:var(--muted);font-size:17px;max-width:760px}
+
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:40px}
+    .feature{
+      min-height:240px;padding:28px;border-radius:var(--radius);
+      border:1px solid var(--line);background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.018));
+      position:relative;overflow:hidden;
+    }
+    .feature:after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;right:-65px;top:-65px;background:radial-gradient(circle,rgba(53,229,141,.15),transparent 70%)}
+    .icon{
+      width:48px;height:48px;border-radius:15px;display:grid;place-items:center;
+      background:rgba(53,229,141,.09);border:1px solid rgba(53,229,141,.16);font-size:21px;
+    }
+    .feature h3{font-size:19px;margin:22px 0 8px}.feature p{color:var(--muted);font-size:14px;margin:0}
+
+    .quote-shell{
+      display:grid;grid-template-columns:.82fr 1.18fr;gap:22px;
+      border:1px solid rgba(134,255,192,.16);
+      border-radius:34px;padding:18px;
+      background:linear-gradient(150deg,rgba(53,229,141,.06),rgba(255,255,255,.025));
+      box-shadow:var(--shadow);
+    }
+    .quote-intro{
+      padding:44px;border-radius:25px;
+      background:
+        radial-gradient(circle at 90% 0%,rgba(244,210,123,.12),transparent 20rem),
+        linear-gradient(160deg,#10271d,#09150f);
+      min-height:650px;display:flex;flex-direction:column;justify-content:space-between;
+    }
+    .quote-intro ul{list-style:none;padding:0;margin:32px 0 0}
+    .quote-intro li{display:flex;gap:10px;margin:14px 0;color:#d8e9df}
+    .check{color:var(--green);font-weight:900}
+    .security{font-size:12px;color:#789486}
+
+    .form-card{background:#f5faf7;color:#07110c;border-radius:25px;padding:38px;min-height:650px}
+    .progress{height:6px;border-radius:999px;background:#dfe9e3;overflow:hidden;margin-bottom:12px}
+    .progress > span{display:block;width:25%;height:100%;background:linear-gradient(90deg,#0db968,#35e58d);transition:.35s ease}
+    .step-label{font-size:12px;color:#66796f;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+    .form-card h3{font-size:30px;letter-spacing:-.03em;margin:8px 0 8px}
+    .form-card p.lead{color:#677a70;margin:0 0 26px}
+    .form-step{display:none}
+    .form-step.active{display:block;animation:fade .3s ease}
+    @keyframes fade{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    label{display:block;font-size:12px;font-weight:800;margin:14px 0 7px;color:#2c4437}
+    input,select,textarea{
+      width:100%;border:1px solid #d6e1da;background:white;border-radius:14px;padding:14px 15px;
+      color:#07110c;outline:none;transition:.2s
+    }
+    input:focus,select:focus,textarea:focus{border-color:#21c575;box-shadow:0 0 0 4px rgba(33,197,117,.09)}
+    textarea{min-height:110px;resize:vertical}
+    .choices{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+    .choice{
+      border:1px solid #d7e3db;border-radius:15px;padding:14px;background:white;cursor:pointer;
+      display:flex;gap:10px;align-items:flex-start;font-size:13px;
+    }
+    .choice input{width:auto;margin-top:3px}
+    .form-actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:26px}
+    .back{background:transparent;border:0;color:#61756a;font-weight:800;cursor:pointer}
+    .next,.submit{
+      border:0;border-radius:999px;padding:14px 20px;background:#07160e;color:white;font-weight:900;cursor:pointer
+    }
+    .fine{font-size:11px;color:#71837a;margin-top:18px}
+
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+    .compare-card{padding:34px;border-radius:28px;border:1px solid var(--line);background:rgba(255,255,255,.025)}
+    .compare-card.highlight{border-color:rgba(53,229,141,.28);background:linear-gradient(160deg,rgba(53,229,141,.09),rgba(255,255,255,.02))}
+    .compare-card h3{font-size:26px;margin-top:0}
+    .compare-card ul{padding:0;list-style:none}
+    .compare-card li{margin:12px 0;color:var(--muted)}
+    .compare-card li:before{content:"—";margin-right:10px;color:var(--green)}
+
+    .seo-block{max-width:900px}
+    .seo-block h3{font-size:28px;margin-top:38px}
+    .seo-block p{color:#b2c8bc}
+    .faq{border-top:1px solid var(--line);margin-top:42px}
+    details{border-bottom:1px solid var(--line);padding:22px 0}
+    summary{cursor:pointer;font-weight:800;font-size:17px}
+    details p{color:var(--muted);max-width:850px}
+
+    footer{padding:50px 0 80px;border-top:1px solid var(--line);color:#789486;font-size:12px}
+    .footer-grid{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .disclaimer{max-width:850px;margin-top:24px;line-height:1.7}
+
+    @media(max-width:980px){
+      .hero-grid,.quote-shell{grid-template-columns:1fr}
+      .scene{min-height:500px}
+      .cards{grid-template-columns:1fr 1fr}
+      .trust-grid{grid-template-columns:1fr 1fr}
+      .trust-item:nth-child(2){border-right:0}
+      .nav-links{display:none}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(calc(100% - 24px),var(--max))}
+      .hero{padding-top:66px}
+      h1{font-size:50px}
+      .scene{min-height:430px;transform:scale(.85)}
+      .cards,.compare,.grid2,.choices,.trust-grid{grid-template-columns:1fr}
+      .trust-item{border-right:0;border-bottom:1px solid var(--line)}
+      .quote-intro,.form-card{padding:26px}
+      .quote-shell{padding:10px}
+      .nav-cta{padding:11px 14px;font-size:12px}
+    }
+  </style>
+</head>
+
+<body>
+<div class="grain"></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="brand" href="#top" aria-label="PokemonCardInsurance.com home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>PokemonCardInsurance.com<small>Collection protection</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#coverage">Coverage</a>
+      <a href="#how">How it works</a>
+      <a href="#compare">Compare</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="nav-cta" href="#quote">Start a quote</a>
+  </div>
+</nav>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="pulse"></span> Built for serious collectors</span>
+        <h1>Protect the cards you <em>worked to collect.</em></h1>
+        <p class="hero-copy">
+          Request a specialty insurance quote for eligible Pokémon cards, graded slabs, sealed product, singles, and high-value collections. Built for collectors who want protection designed around collectibles—not generic household property.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="#quote">Get my collection reviewed</a>
+          <a class="ghost" href="#coverage">See what may be covered</a>
+        </div>
+        <div class="micro">No obligation. Coverage, limits, exclusions, valuation requirements and availability vary by carrier and policy.</div>
+      </div>
+
+      <div class="scene" aria-label="Abstract premium graded trading card display">
+        <div class="orb"></div>        <div class="mini-slab mini-1"></div>
+        <div class="mini-slab mini-2"></div>
+        <div class="slab">
+          <div class="label">
+            <div><strong>COLLECTOR SERIES</strong><span>Verified inventory ready</span></div>
+            <div class="grade">10</div>
+          </div>
+          <div class="card-art"></div>
+        </div>
+        <div class="value-chip">Collection value<b>$25K+</b>Specialty review recommended</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="trust">
+    <div class="wrap trust-grid">
+      <div class="trust-item"><b>Graded cards</b><span>PSA, CGC, BGS and other eligible slabs</span></div>
+      <div class="trust-item"><b>Sealed product</b><span>Eligible booster boxes, ETBs and sealed inventory</span></div>
+      <div class="trust-item"><b>Singles & collections</b><span>Documented raw cards and mixed collections</span></div>
+      <div class="trust-item"><b>Collector-first intake</b><span>Tell us what you own before speaking with an agent</span></div>
+    </div>
+  </div>
+
+  <section id="coverage">
+    <div class="wrap">
+      <div class="kicker">Purpose-built protection</div>
+      <h2>Your collection is more than a line item.</h2>
+      <p class="section-copy">
+        Specialty collectibles insurance may offer options designed for the risks collectors actually think about. Exact coverage depends on the carrier, underwriting, scheduled values, deductibles, exclusions, and policy terms.
+      </p>
+
+      <div class="cards">
+        <article class="feature">
+          <div class="icon">⌂</div>
+          <h3>Theft & burglary</h3>
+          <p>Ask about eligible protection for theft or burglary involving your collection at home or other covered locations.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">✦</div>
+          <h3>Fire & accidental loss</h3>
+          <p>Explore specialty coverage options for qualifying physical loss or damage events, subject to the policy.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">↗</div>
+          <h3>Transit & shipping</h3>
+          <p>Collectors who ship, grade, buy, sell or trade can ask whether transit-related protection is available.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">◎</div>
+          <h3>Shows & events</h3>
+          <p>If you bring cards to conventions or shows, tell us how you use the collection so the agent can review appropriate options.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="quote">
+    <div class="wrap quote-shell">
+      <div class="quote-intro">
+        <div>
+          <div class="kicker">Collector quote intake</div>
+          <h2 style="font-size:48px">Tell us what you've built.</h2>
+          <p class="section-copy">A cleaner intake means a faster, more accurate conversation with a licensed insurance professional.</p>
+          <ul>
+            <li><span class="check">✓</span> Graded cards and certification details</li>
+            <li><span class="check">✓</span> Sealed product and raw singles</li>
+            <li><span class="check">✓</span> Estimated collection value</li>
+            <li><span class="check">✓</span> Storage, transit and show exposure</li>
+            <li><span class="check">✓</span> Appraisal / documentation needs</li>
+          </ul>
+        </div>
+        <div class="security">Your information should be transmitted to your CRM through a secure HTTPS endpoint. Do not collect payment card data in this form.</div>
+      </div>
+
+      <form class="form-card" id="leadForm">
+        <div class="progress"><span id="progressBar"></span></div>
+        <div class="step-label" id="stepLabel">Step 1 of 4</div>
+
+        <div class="form-step active" data-step="1">
+          <h3>About your collection</h3>
+          <p class="lead">Start with the basics. Exact values can be reviewed later.</p>
+
+          <label for="collectionValue">Estimated total collection value</label>
+          <select id="collectionValue" name="collection_value" required>
+            <option value="">Select a range</option>
+            <option>Under $5,000</option>
+            <option>$5,000–$9,999</option>
+            <option>$10,000–$24,999</option>
+            <option>$25,000–$49,999</option>
+            <option>$50,000–$99,999</option>
+            <option>$100,000–$249,999</option>
+            <option>$250,000+</option>
+          </select>
+
+          <label>What do you want to protect?</label>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="collection_type" value="Graded cards"> Graded cards / slabs</label>
+            <label class="choice"><input type="checkbox" name="collection_type" value="Raw singles"> Raw singles</label>
+            <label class="choice"><input type="checkbox" name="collection_type" value="Sealed product"> Sealed product</label>
+            <label class="choice"><input type="checkbox" name="collection_type" value="Mixed collection"> Mixed collection</label>
+          </div>
+
+          <label for="highValue">Highest-value single item (estimate)</label>
+          <select id="highValue" name="highest_item_value">
+            <option value="">Select a range</option>
+            <option>Under $1,000</option>
+            <option>$1,000–$4,999</option>
+            <option>$5,000–$9,999</option>
+            <option>$10,000–$24,999</option>
+            <option>$25,000+</option>
+          </select>
+        </div>
+
+        <div class="form-step" data-step="2">
+          <h3>How is it stored and used?</h3>
+          <p class="lead">This helps identify the exposures that matter.</p>
+
+          <label for="storage">Primary storage</label>
+          <select id="storage" name="primary_storage" required>
+            <option value="">Select one</option>
+            <option>Home collection room / display</option>
+            <option>Safe or secure cabinet</option>
+            <option>Bank / third-party vault</option>
+            <option>Retail store / card shop</option>
+            <option>Warehouse / business location</option>
+            <option>Other</option>
+          </select>
+
+          <label>Do you regularly do any of the following?</label>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="exposure" value="Ship cards"> Ship cards</label>
+            <label class="choice"><input type="checkbox" name="exposure" value="Send for grading"> Send cards for grading</label>
+            <label class="choice"><input type="checkbox" name="exposure" value="Attend shows"> Attend card shows</label>
+            <label class="choice"><input type="checkbox" name="exposure" value="Buy/sell/trade"> Buy, sell or trade</label>
+          </div>
+
+          <label for="businessUse">Is this collection used for business or resale?</label>
+          <select id="businessUse" name="business_use">
+            <option value="">Select one</option>
+            <option>No — personal collection</option>
+            <option>Some buying/selling</option>
+            <option>Yes — dealer / business inventory</option>
+          </select>
+        </div>
+
+        <div class="form-step" data-step="3">
+          <h3>Documentation</h3>
+          <p class="lead">Strong documentation can make the review process easier.</p>
+
+          <label>What documentation do you currently have?</label>
+          <div class="choices">
+            <label class="choice"><input type="checkbox" name="documentation" value="Photos"> Collection photos</label>
+            <label class="choice"><input type="checkbox" name="documentation" value="Receipts"> Purchase receipts</label>
+            <label class="choice"><input type="checkbox" name="documentation" value="Certification numbers"> Certification numbers</label>
+            <label class="choice"><input type="checkbox" name="documentation" value="Inventory"> Digital inventory / portfolio</label>
+          </div>
+
+          <label for="inventoryUrl">Portfolio or inventory link (optional)</label>
+          <input id="inventoryUrl" name="inventory_url" type="url" placeholder="https://..." />
+
+          <label for="notes">Anything unique about your collection?</label>
+          <textarea id="notes" name="collection_notes" placeholder="High-value cards, sealed cases, frequent shipping, show attendance, recent appraisal, etc."></textarea>
+        </div>
+
+        <div class="form-step" data-step="4">
+          <h3>Where should we send your review?</h3>
+          <p class="lead">A licensed insurance professional can follow up about eligibility and available options.</p>
+
+          <div class="grid2">
+            <div>
+              <label for="firstName">First name</label>
+              <input id="firstName" name="first_name" autocomplete="given-name" required />
+            </div>
+            <div>
+              <label for="lastName">Last name</label>
+              <input id="lastName" name="last_name" autocomplete="family-name" required />
+            </div>
+          </div>
+
+          <div class="grid2">
+            <div>
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" required />
+            </div>
+          </div>
+
+          <div class="grid2">
+            <div>
+              <label for="state">State</label>
+              <input id="state" name="state" autocomplete="address-level1" placeholder="CA" required />
+            </div>
+            <div>
+              <label for="zip">ZIP code</label>
+              <input id="zip" name="zip" inputmode="numeric" autocomplete="postal-code" required />
+            </div>
+          </div>
+          <label class="choice" style="margin-top:18px">
+            <input id="consent" type="checkbox" required>
+            I agree to be contacted about my quote request by phone, email, or text. Consent is not a condition of purchase.
+          </label>
+
+          <div class="fine">
+            By submitting, you are requesting an insurance review—not purchasing coverage. No coverage is bound or effective until confirmed by a licensed insurance professional and the applicable carrier.
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="back" type="button" id="backBtn" style="visibility:hidden">← Back</button>
+          <button class="next" type="button" id="nextBtn">Continue →</button>
+          <button class="submit" type="submit" id="submitBtn" style="display:none">Request my review →</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <div class="kicker">Simple by design</div>
+      <h2>From collection to quote request in minutes.</h2>
+      <div class="cards" style="grid-template-columns:repeat(3,1fr)">
+        <article class="feature"><div class="icon">01</div><h3>Describe your collection</h3><p>Tell us the estimated value, format, storage, and how you use your cards.</p></article>
+        <article class="feature"><div class="icon">02</div><h3>Share documentation</h3><p>Add portfolio links, certification details, receipts or other records when available.</p></article>
+        <article class="feature"><div class="icon">03</div><h3>Get a professional review</h3><p>A licensed insurance professional can review eligibility and available specialty options.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="compare">
+    <div class="wrap">
+      <div class="kicker">Compare protection</div>
+      <h2>Homeowners coverage and specialty collectibles coverage are not always the same.</h2>
+      <p class="section-copy">The right choice depends on your existing policy and the specialty policy offered. Always compare actual terms, limits, deductibles, exclusions and valuation provisions.</p>
+
+      <div class="compare">
+        <div class="compare-card">
+          <h3>Standard homeowners / renters</h3>
+          <ul>
+            <li>May contain limits for certain categories of property</li>
+            <li>May use deductibles that are significant relative to the loss</li>
+            <li>Valuation method may not match collectible-market expectations</li>
+            <li>Transit, shows or business inventory may need separate review</li>
+          </ul>
+        </div>
+        <div class="compare-card highlight">
+          <h3>Specialty collectibles policy</h3>
+          <ul>
+            <li>Designed specifically around collectible property</li>
+            <li>May offer scheduled or blanket collection approaches</li>
+            <li>Can consider documentation, current values and collection use</li>
+            <li>May provide options tailored to collectors, subject to policy terms</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap seo-block">
+      <div class="kicker">Collector resource</div>
+      <h2>Pokémon card insurance for modern collections.</h2>
+      <p>
+        High-value Pokémon collections can include professionally graded cards, raw singles, sealed booster boxes, elite trainer boxes, vintage products, promotional cards, and complete sets. As collection values grow, collectors often want to understand whether their homeowners or renters policy is enough—or whether a specialty collectibles insurance policy may be a better fit.
+      </p>
+      <p>
+        PokemonCardInsurance.com is designed to help collectors organize the information an insurance professional may need to review a collection. That can include estimated total value, highest-value items, grading certification details, purchase records, storage methods, shipping activity, card-show attendance, and whether the collection is personal or used as business inventory.
+      </p>
+
+      <h3>Insurance for graded Pokémon cards</h3>
+      <p>
+        Graded cards can be easier to document because they typically have a grading company, grade, certification number, and comparable market data. Depending on the insurer and collection value, an underwriter may still request photographs, receipts, inventory reports, appraisals, or additional verification.
+      </p>
+
+      <h3>Insurance for sealed Pokémon products</h3>
+      <p>
+        Sealed collections can include booster boxes, elite trainer boxes, collection boxes, cases, tins, and other unopened products. If you want sealed inventory included in a quote request, document quantities, product names, acquisition costs when available, and current estimated values.
+      </p>
+
+      <h3>When should a collector request a specialty insurance review?</h3>
+      <p>
+        A review may be worth considering when a collection becomes difficult to replace out of pocket, when individual items have significant value, when cards are frequently shipped or sent for grading, when collections travel to shows, or when the collector is unsure how their existing homeowners or renters policy would respond to a loss.
+      </p>
+
+      <div class="faq" id="faq">
+        <details>
+          <summary>Can Pokémon cards be insured?</summary>
+          <p>Specialty collectibles policies may be available for eligible trading card collections. Availability, limits, exclusions, valuation requirements and covered causes of loss depend on the carrier and policy.</p>
+        </details>
+        <details>
+          <summary>Can graded Pokémon cards be insured?</summary>
+          <p>Eligible graded cards may be insurable. The insurer may request certification numbers, photos, receipts, current values or appraisals depending on the item and total collection value.</p>
+        </details>
+        <details>
+          <summary>Can sealed Pokémon products be insured?</summary>
+          <p>Some programs may consider sealed products such as booster boxes and elite trainer boxes. Underwriting requirements vary, especially for high-value or business inventory.</p>
+        </details>
+        <details>
+          <summary>Does homeowners insurance cover a Pokémon card collection?</summary>
+          <p>It can provide some coverage, but policy limits, deductibles, exclusions and valuation methods may differ from specialty collectibles coverage. Review the actual policy rather than assuming the collection is fully protected.</p>
+        </details>
+        <details>
+          <summary>Do I need an appraisal?</summary>
+          <p>Not every collection requires the same documentation. The carrier may ask for an appraisal or additional proof of value depending on collection size, individual item values, and underwriting requirements.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:20px">
+    <div class="wrap" style="text-align:center;padding:70px 24px;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,rgba(53,229,141,.10),rgba(255,255,255,.02))">
+      <div class="kicker">Your collection deserves a closer look</div>
+      <h2 style="max-width:760px;margin-left:auto;margin-right:auto">Know what you own. Understand your options. Protect what matters.</h2>
+      <a class="btn" href="#quote" style="display:inline-block;margin-top:14px">Start my collector intake</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="brand"><span class="brand-mark"></span><span>PokemonCardInsurance.com<small>Collection protection</small></span></div>
+      <div>Privacy · Terms · Licensing · Contact</div>
+    </div>
+    <div class="disclaimer">
+      PokemonCardInsurance.com provides educational information and quote-intake assistance. It is not itself an insurance policy, carrier, grading company, appraisal service, or guarantee of coverage. Insurance products are subject to underwriting, eligibility, availability, policy terms, conditions, exclusions, deductibles and limits. Coverage is not bound by submitting this form. Pokémon is a trademark of its respective owner; this site is not affiliated with or endorsed by The Pokémon Company, Nintendo, Game Freak, Creatures, PSA, CGC, BGS, or any grading company referenced for descriptive purposes.
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const steps = [...document.querySelectorAll('.form-step')];
+  const progressBar = document.getElementById('progressBar');
+  const stepLabel = document.getElementById('stepLabel');
+  const nextBtn = document.getElementById('nextBtn');
+  const backBtn = document.getElementById('backBtn');
+  const submitBtn = document.getElementById('submitBtn');
+  const form = document.getElementById('leadForm');
+  let current = 0;
+
+  function update(){
+    steps.forEach((s,i)=>s.classList.toggle('active',i===current));
+    progressBar.style.width = ((current+1)/steps.length*100) + '%';
+    stepLabel.textContent = `Step ${current+1} of ${steps.length}`;
+    backBtn.style.visibility = current === 0 ? 'hidden' : 'visible';
+    nextBtn.style.display = current === steps.length-1 ? 'none' : 'inline-block';
+    submitBtn.style.display = current === steps.length-1 ? 'inline-block' : 'none';
+  }
+
+  function validCurrentStep(){
+    const required = [...steps[current].querySelectorAll('[required]')];
+    for (const field of required){
+      if (!field.checkValidity()){
+        field.reportValidity();
+        return false;
+      }
+    }
+    return true;
+  }
+
+  nextBtn.addEventListener('click',()=>{
+    if(!validCurrentStep()) return;
+    if(current < steps.length-1){ current++; update(); }
+  });
+
+  backBtn.addEventListener('click',()=>{
+    if(current > 0){ current--; update(); }
+  });
+
+  form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    if(!validCurrentStep()) return;
+
+    const payload = Object.fromEntries(new FormData(form).entries());
+    console.log('Lead payload ready for CRM/API endpoint:', payload);
+
+    /*
+      INTEGRATION HANDOFF:
+      Replace this demo success state with a secure HTTPS POST to your lead endpoint.
+      Recommended backend behavior:
+      1. Validate email deliverability and phone validity before creating the lead.
+      2. Normalize phone to E.164.
+      3. Add UTM source/medium/campaign + landing page + referrer.
+      4. Create/update BIQ lead profile.
+      5. Apply source = pokemoncardinsurance.com.
+      6. Route line of business = Collectibles / TCG Insurance.
+      7. Trigger agent notification and lead follow-up workflow.
+      8. Preserve consent timestamp + IP server-side.
+    */
+
+    form.innerHTML = `
+      <div style="min-height:560px;display:grid;place-items:center;text-align:center;padding:40px">
+        <div>
+          <div style="width:72px;height:72px;border-radius:50%;display:grid;place-items:center;margin:0 auto 24px;background:#dff8ea;color:#07834a;font-size:34px">✓</div>
+          <div class="step-label">Intake received</div>
+          <h3 style="font-size:38px;margin:8px 0">Your collection review is ready for the next step.</h3>          <p class="lead">A licensed insurance professional can review your information and contact you about available options.</p>
+        </div>
+      </div>`;
+  });
+
+  update();
+})();
+</script>
+
+</body>
+</html>
