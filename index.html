@@ -840,12 +840,23 @@
     if(current > 0){ current--; update(); }
   });
 
-  form.addEventListener('submit',(e)=>{
+  form.addEventListener('submit',async (e)=>{
     e.preventDefault();
     if(!validCurrentStep()) return;
 
     const payload = Object.fromEntries(new FormData(form).entries());
-    console.log('Lead payload ready for CRM/API endpoint:', payload);
+
+    // Send the lead to our endpoint (forwards to BrokerIQ + emails the agency).
+    // Fail-open: the visitor still sees success even if the request errors.
+    try {
+      await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+    } catch (err) {
+      console.error('Lead submission error:', err);
+    }
 
     /*
       INTEGRATION HANDOFF:
