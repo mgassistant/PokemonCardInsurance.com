@@ -12,7 +12,7 @@
 // Fail-open: never blocks the visitor — always returns { ok: true } even if a
 // downstream (BrokerIQ / Resend) call fails; errors are logged server-side.
 
-import { clientIP, emailVerdictNote, rawWithEmailVerdict, verifyEmail } from "./_emailVerification.js";
+import { badEmailFlag, clientIP, emailVerdictNote, rawWithEmailVerdict, verifyEmail } from "./_emailVerification.js";
 
 const BROKERIQ_URL = process.env.BROKERIQ_URL || "https://www.broker-iq.com/api/leads/inbound";
 const BROKERIQ_TENANT_ID = process.env.BROKERIQ_TENANT_ID || "a48b4bbb-0a1a-4cef-bb21-56c7bf94f64e"; // defaults to tcg-insurance tenant; override in Vercel with the separate tenant when ready
@@ -122,7 +122,10 @@ export default async function handler(req, res) {
   // the phone number may still be good. Fails open.
   const emailCheck = await verifyEmail(email, clientIP(req));
   lead.raw = rawWithEmailVerdict(lead.raw, emailCheck);
-  if (lead.raw.suspected_spam) console.log(`[SPAM] Soft-flagged [${lead.raw.spam_flags.join(",")}] lead from ${lead.source}`);
+  // Log only the flag this check produced: a client-supplied raw.spam_flags may
+  // not be an array, and must never be able to throw before the lead is forwarded.
+  const emailFlag = badEmailFlag(emailCheck);
+  if (emailFlag) console.log(`[SPAM] Soft-flagged [${emailFlag}] lead from ${lead.source}`);
 
   // Fire both destinations; don't let either block the visitor.
   await Promise.allSettled([

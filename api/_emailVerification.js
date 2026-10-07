@@ -127,5 +127,7 @@ export function rawWithEmailVerdict(existingRaw, verdict) {
 export function emailVerdictNote(email, v) {
   if (!email) return '';
   if (!v.checked && v.ok) return ' (not verified)';
-  return v.ok ? ' ✅ verified' : ` ❌ ${v.sub_status || v.status || 'invalid'}`;
+  if (!v.ok) return ` ❌ ${v.sub_status || v.status || 'invalid'}`;
+  // Only "valid" is a confirmed address; catch-all / unknown are inconclusive.
+  return v.status === 'valid' ? ' ✅ verified' : ` (${v.status || 'not verified'})`;
 }
